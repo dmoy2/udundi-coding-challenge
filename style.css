@@ -114,6 +114,7 @@ body {
     top: 12%;
     left: 12%;
     box-shadow: 0 0 15px #3e3e3e;
+    margin: auto 0;
 }
 
 .modal-content {
@@ -187,4 +188,63 @@ body {
     width: 48px;
     height: 48px;
     margin: 20px;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 1450px){
+    /* extra large screen */
+    #explore-title span {
+        font-size: 14rem;
+    }
+
+    .explore-content #more-details {
+        font-size: 1.7rem;
+    }
+
+    .socials {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .socials img {
+        width: 68px;
+        height: 68px;
+    }
+
+    .modal-dialog {
+        width: 90rem;
+        top: 12%;
+        left: 12%;
+    }
+
+    .modal-body {
+        margin: 20px 60px 85px 60px;
+        padding: 0;
+    }
+
+    .modal-body .modal-title  {
+        font-size: 4rem;
+        letter-spacing: 2px;
+        margin-top: 40px;
+    }
+
+    .gradient-line {
+        height: 2px;
+        width: 17rem;
+        background-image: linear-gradient(to right, #611818, #FFF);
+    }
+
+    .modal-info {
+        font-size: 0.8rem;
+        line-height: 1.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .modal-body button {
+        background-image: linear-gradient(to right, #611818, #A36754);
+        border-radius: 0;
+        padding: 15px 45px;
+        border: 0;
+    }
 }
