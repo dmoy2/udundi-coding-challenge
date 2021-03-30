@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Udundi Coding Challenge</title>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!--Bootstrap4.6 Link-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        
+        <!--jQuery Scripts-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        
+        <!--Animation Link-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        
+        <link href="./style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!--Red Column Section-->
+        <div id="red-col"></div>
+        <!--Explore Content Section-->
+        <div class="container p-0 ">           
+            <div class="explore-content" id="explore-content">
+                <div class="title" id="explore-title" data-aos="fade-right" data-aos-offset="300" data-aos-duration="3000" data-aos-easing="linear">
+                    <span>E</span><span>x</span><span>p</span><span>l</span><span>o</span>
+                    <span>r</span><span>e</span>
+                </div>
+                <span id="more-details" data-aos="fade-right" data-aos-offset="200" data-aos-duration="2000" data-aos-delay="1000" data-aos-easing="linear">
+                    <img id="plus" src="./imgs/Plus.svg" alt="Plus Logo" title="Click to Expand Details" data-toggle="modal" data-target="#explore-modal"/>
+                    More Details
+                </span>
+            </div>
+            <!--Bootstrap Modal Section-->
+            <div class="modal" id="explore-modal" role="dialog" data-backdrop="static">
+               <div class="modal-dialog" id="modal-container" role="document" data-aos-duration="1000" data-aos-easing="ease-out">
+                    <div class="modal-content" >
+                        <div class="modal-body">
+                            <img class="btn x close" role="button" data-dismiss="modal" aria-label="Close" src="./imgs/X.svg" alt="Close Modal">
+                            <h1 class="modal-title">Explore</h1>
+                            <div class="gradient-line"></div>
+                            <br>
+                            <p class="modal-info">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                            <button><a href="https://en.wikipedia.org/wiki/Lorem_ipsum" target="_blank">Read More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Social Media/ Contact Us Section-->
+        <div class="socials">
+            <a href="https://www.facebook.com" target="_blank"><img src="./imgs/Facebook.svg" alt="Facebook logo" title="Find us on Facebook!"></a>
+            <a href="https://www.instagram.com" target= "_blank"><img src="./imgs/Instagram.png" alt="Instagram logo" title="Find us on Instagram!"></a>
+        </div>
+        <!--JavaScript Scripts-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script type="text/javascript">
+            // close modal
+            $("#explore-modal").on('hidden.bs.modal', function() {
+                $('.modal-dialog').attr('class', 'modal-dialog flipOutY animated');
+                $('#explore-content').css("visibility", "visible"); 
+            })
+                            
+            // open modal
+            $("#explore-modal").on('show.bs.modal', function () {
+                $('.modal-dialog').attr('data-aos', 'flip-right');
+                $('#explore-content').css("visibility", "hidden");
+            })
+        </script>
+    </body>
+</html>

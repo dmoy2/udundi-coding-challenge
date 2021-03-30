@@ -1,0 +1,179 @@
+/* Universal CSS Rules */
+* { 
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body { 
+    background: url(./imgs/Coding-Challenge-Image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Red Column Section */
+#red-col {
+    position: absolute;
+    background-color: #611818;
+    width: 27%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+
+/* Explore Content Section */
+.explore-content { 
+    position: absolute;
+    z-index: 2;
+    top: 42%;
+    left: 12%;
+}
+
+#explore-title span { 
+    position: relative;
+    display: inline-block;
+    color: #D8D8D8;   
+    z-index: 2;
+    font-size: 12rem;
+    margin: 0;
+    -webkit-animation: worm .9s ease-in;
+            animation: worm .9s ease-in;
+    animation-iteration-count: 3;
+}
+
+#explore-title span:nth-child(1) { -webkit-animation-delay: .7s; animation-delay: .7s; }
+#explore-title span:nth-child(2) { -webkit-animation-delay: .6s; animation-delay: .6s; }
+#explore-title span:nth-child(3) { -webkit-animation-delay: .5s; animation-delay: .5s; }
+#explore-title span:nth-child(4) { -webkit-animation-delay: .4s; animation-delay: .4s; }
+#explore-title span:nth-child(5) { -webkit-animation-delay: .3s; animation-delay: .3s; }
+#explore-title span:nth-child(6) { -webkit-animation-delay: .2s; animation-delay: .2s; }
+#explore-title span:nth-child(7) { -webkit-animation-delay: .1s; animation-delay: .1s; }
+
+@keyframes worm {
+    100% {
+        top: -60px;
+    }
+}
+
+.explore-content span { 
+    position: relative;
+    display: block;
+    color: #D8D8D8;
+    font-size: 1.3rem;
+    margin-top: -30px;
+}
+
+.explore-content #more-details {
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    top: -45px;
+    left: 10px;
+}
+
+.explore-content #plus {
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+/* Bootstrap Modal Section */
+.modal-backdrop {
+   background: none;
+}
+
+.modal-dialog {
+    position: absolute;
+    width: 32%;
+    top: 12%;
+    left: 12%;
+    box-shadow: 0 0 15px #3e3e3e;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-body {
+    margin: 10px 40px 55px 40px;
+    padding: 0;
+}
+
+.modal-body .x {
+    padding: 0;
+    position: absolute;
+    right: -28px;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    opacity: 1;
+}
+
+.modal-body .modal-title  {
+    color: #611818;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin-top: 40px;
+}
+
+.gradient-line { 
+    height: 2px;
+    width: 65%;
+    background-image: linear-gradient(to right, #611818, #FFF);
+}
+
+.modal-info {
+    font-size: 0.8rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.modal-body button {
+    background-image: linear-gradient(to right, #611818, #A36754);
+    border-radius: 0;
+    padding: 10px 40px;
+    border: 0;
+}
+
+.modal-body button:hover {
+    background-image: linear-gradient(to left, #611818, #A36754);
+    transition: background-image 2s ease-in;
+}
+
+.modal-body button a {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.15rem;
+    text-decoration: none;
+}
+
+
+/* Social Media/ Contact Us Section */
+.socials { 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.socials img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 20px;
+}
