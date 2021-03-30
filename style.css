@@ -80,6 +80,7 @@ body {
     z-index: 3;
     top: -45px;
     left: 10px;
+    animation: shift 3.5s linear;
 }
 
 .explore-content #plus {
@@ -89,6 +90,16 @@ body {
     padding: 0;
     cursor: pointer;
     margin-left: 20px;
+}
+
+@keyframes shift {
+    100% {
+        left: 10px;
+        opacity 1;
+    } 0% {
+        left: -150px;
+        opacity: 0;
+    }
 }
 
 
